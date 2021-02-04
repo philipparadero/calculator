@@ -1,8 +1,56 @@
 import React from 'react';
-import Button from './components/Button'
+import ComputePanel from './components/ComputePanel'
 
-export default () => {
+const App = () => {
+  const buttonText = [
+    {
+      text: '1'
+    },
+    {
+      text: '2'
+    },
+    {
+      text: '3'
+    },
+    {
+      text: '4'
+    },
+    {
+      text: '5'
+    },
+    {
+      text: '6'
+    },
+    {
+      text: '7'
+    },
+    {
+      text: '8'
+    },
+    {
+      text: '9'
+    },
+    {
+      text: '0'
+    },
+    {
+      text: 'del'
+    },
+    {
+      text: '+'
+    },
+    {
+      text: '-'
+    }
+];
+
+ 
   return (
-    <div><Button /></div>
+    <div   >
+      <ComputePanel buttonText={buttonText}/>
+    </div>
   )
 };
+
+
+export default App;

@@ -1,8 +1,14 @@
 import React from 'react';
+import '../Button.css'
 
-const Button = () => {
+const Button = (props) => {
+
+    const onClickButton = () =>{
+        props.onClickButtonHandler(props.text);
+    }
+   
     return (
-        <div>This is a button</div>
+        <div className="button"  name={props.text} onClick={onClickButton}>{props.text}</div>
     )
 };
 
