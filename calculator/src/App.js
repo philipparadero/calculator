@@ -34,13 +34,34 @@ const App = () => {
       text: '0'
     },
     {
-      text: 'del'
+      text: '/'
+    },
+    {
+      text: 'x'
+    },
+    {
+      text: '-'
     },
     {
       text: '+'
     },
     {
-      text: '-'
+      text: '='
+    },
+    {
+      text: '%'
+    },
+    {
+      text: '+/-'
+    },
+    {
+      text: 'c'
+    },
+    {
+      text: 'del'
+    },
+    {
+      text: '.'
     }
 ];
 
