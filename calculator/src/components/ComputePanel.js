@@ -7,7 +7,7 @@ const ComputePanel = (props) => {
     const [equation, setEquation] = useState('');
 
     const onClickButton = (text) =>{
-
+        console.log(text);
         if(text === '=') {
            calculate();
         } else if(text === 'x') {
@@ -18,7 +18,7 @@ const ComputePanel = (props) => {
             setEquation(equation.slice(0, -1));
         } else if(text === 'c') {
             setEquation('');
-            setResult('');
+            setResult('0');
         }
         else {
             setEquation(equation+text);
@@ -28,15 +28,14 @@ const ComputePanel = (props) => {
     const calculate = () =>{
         try{
             setResult(eval(equation));
-            setEquation('');
+            setEquation(equation);
         } catch (e) {
             setResult("Invalid Equation");
             setEquation('');
         }
     }
 
-    console.log("equation", equation);
-    console.log("result", result);
+   
     const renderedButtons = props.buttonText.map((item)=>{
         return (
             <div key={item.text}>
@@ -49,8 +48,9 @@ const ComputePanel = (props) => {
     })
 
     return (
-        <div>
-            <div>{result}</div>
+        <div className="body-calculator">
+            <div className="equation-panel">{equation}</div>
+            <div className="result-panel">{result}</div>
             <div className="flex-container">{renderedButtons}</div>
         </div>
     )

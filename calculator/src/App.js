@@ -1,25 +1,20 @@
 import React from 'react';
 import ComputePanel from './components/ComputePanel'
+import './App.css';
 
 const App = () => {
   const buttonText = [
     {
-      text: '1'
+      text: 'c'
     },
     {
-      text: '2'
+      text: '+/-'
     },
     {
-      text: '3'
+      text: '%'
     },
     {
-      text: '4'
-    },
-    {
-      text: '5'
-    },
-    {
-      text: '6'
+      text: '/'
     },
     {
       text: '7'
@@ -31,43 +26,49 @@ const App = () => {
       text: '9'
     },
     {
-      text: '0'
-    },
-    {
-      text: '/'
-    },
-    {
       text: 'x'
+    },
+    {
+      text: '4'
+    },
+    {
+      text: '5'
+    },
+    {
+      text: '6'
     },
     {
       text: '-'
     },
     {
+      text: '1'
+    },
+    {
+      text: '2'
+    },
+    {
+      text: '3'
+    },
+    {
       text: '+'
     },
     {
-      text: '='
+      text: '0'
     },
     {
-      text: '%'
-    },
-    {
-      text: '+/-'
-    },
-    {
-      text: 'c'
+      text: '.'
     },
     {
       text: 'del'
     },
     {
-      text: '.'
+      text: '='
     }
 ];
 
  
   return (
-    <div   >
+    <div className="calculator-body">
       <ComputePanel buttonText={buttonText}/>
     </div>
   )
